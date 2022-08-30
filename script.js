@@ -1,8 +1,9 @@
-const header = document.querySelector("header");
 const container = document.querySelector(".container");
-const footer = document.querySelector("footer");
+const column = document.querySelector(".column");
+const row = document.querySelector(".row");
 
-for (let i = 0; i < 16 * 16; i++) {
+for (let i = 0; i < 5; i++) {
   const div = document.createElement("div");
-  container.appendChild(div);
+  div.classList.add("smallGrid");
+  column.appendChild(div);
 }
