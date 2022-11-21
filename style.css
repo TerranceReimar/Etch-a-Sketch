@@ -1,28 +1,131 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+:root {
+  --defaultBackground: linear-gradient(rgb(44, 44, 44), rgb(68, 41, 112));
+  --bodyColor: rgb(56, 56, 56);
+  --textColor: rgb(250, 205, 123);
+  --screenColor: rgb(155, 155, 155);
+  --buttonColor: rgb(46, 46, 46);
+}
+
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
 }
 
-body {
+.content {
+  /* Positioning and size */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* Styling */
+  background-image: var(--defaultBackground);
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto;
 }
 
-.header {
-  text-align: center;
+.body {
+  /* Positioning and size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 550px;
+  width: 700px;
+  padding: 2rem;
+  box-sizing: border-box;
+  /* Styling */
+  background-color: var(--bodyColor);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.title {
+  color: var(--textColor);
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .container {
-  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 70%;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.wheel {
+  background-color: black;
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid gray;
+  border-radius: 25px;
+}
+
+.screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--screenColor);
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 368px;
+  width: 370px;
+  padding: 5px;
+}
+
+.footer {
+  display: flex;
+  gap: 50px;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--buttonColor);
+  color: var(--textColor);
+}
+
+.button:hover {
+  background-color: white;
+  color: rgb(38, 39, 82);
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: var(--buttonColor);
+  color: var(--textColor);
+}
+
+.grid {
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.grid:hover {
+  background-color: black;
+}
+
+.gridActive {
+  background-color: black;
 }
 
 .smallGrid {
-  border: 1px solid black;
-  padding: 10px;
+  height: 23px;
+  width: 23px;
 }
 
-.smallGrid:hover {
-  background-color: black;
+.bigGrid {
+  height: calc(23px / 2);
+  width: calc(23px / 2);
 }
